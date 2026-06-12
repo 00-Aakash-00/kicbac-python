@@ -40,7 +40,7 @@ def _create_params(
         raise InvalidRequestError("pass either payment_token or source_transaction_id, not both")
     if payment_token is None and source_transaction_id is None and not extra_params:
         raise InvalidRequestError(
-            "no payment data to store: pass payment_token (from Collect.js) or "
+            "no payment data to store: pass payment_token (from Kicbac.js) or "
             "source_transaction_id (an existing gateway transaction id)"
         )
     params: dict[str, str] = {"customer_vault": "add_customer"}

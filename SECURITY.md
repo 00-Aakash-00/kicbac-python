@@ -8,7 +8,7 @@ Do not open a public issue for suspected vulnerabilities. Email the Kicbac maint
 
 ## Integration rules
 
-- Tokenize with Collect.js or a Kicbac frontend SDK. Do not build server-side raw card forms.
+- Tokenize with Kicbac.js or a Kicbac frontend SDK. Do not build server-side raw card forms.
 - Keep `KICBAC_SECURITY_KEY` and webhook signing keys in server-side secret stores.
 - Treat declines as typed results. `response=2` is not an exception.
 - Verify webhooks from exact raw bytes with `Webhook-Signature: t=<nonce>,s=<sig>`.

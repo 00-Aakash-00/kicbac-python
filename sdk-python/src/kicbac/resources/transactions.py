@@ -1,7 +1,7 @@
 """transact.php transaction operations (sale/auth/capture/void/refund/...).
 
 PCI guardrail: there are deliberately no raw-PAN kwargs (``ccnumber``/``cvv``)
-— tokenize with Collect.js and pass ``payment_token``. ``extra_params`` is the
+— tokenize with Kicbac.js and pass ``payment_token``. ``extra_params`` is the
 documented escape hatch for gateway fields the SDK does not model.
 
 TODO(v2): ``type=offline`` and ``type=complete_partial_payment`` are out of
@@ -70,7 +70,7 @@ def _charge_params(
 ) -> dict[str, str]:
     if payment_token is None and customer_vault_id is None and not extra_params:
         raise InvalidRequestError(
-            f"no payment method for type={type_}: pass payment_token (from Collect.js) or "
+            f"no payment method for type={type_}: pass payment_token (from Kicbac.js) or "
             "customer_vault_id, or supply gateway payment fields via extra_params"
         )
     params: dict[str, str] = {"type": type_}

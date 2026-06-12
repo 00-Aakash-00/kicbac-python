@@ -34,7 +34,7 @@ def _create_params(
     if customer_vault_id is None and payment_token is None and not extra_params:
         raise InvalidRequestError(
             "no payment source for the subscription: pass customer_vault_id or "
-            "payment_token (from Collect.js)"
+            "payment_token (from Kicbac.js)"
         )
     params: dict[str, str] = {"recurring": "add_subscription", "plan_id": plan_id}
     put(params, "customer_vault_id", customer_vault_id)

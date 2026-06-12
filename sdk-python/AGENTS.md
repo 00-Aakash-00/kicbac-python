@@ -1,6 +1,6 @@
-# AGENTS.md - `kicbac` Python SDK
+# AGENTS.md — `kicbac` Python SDK
 
-Sync (`Kicbac`) + async (`AsyncKicbac`) client for the Kicbac gateway.
+Sync (`Kicbac`) + async (`AsyncKicbac`) client for the Kicbac gateway. This file overrides the root `AGENTS.md` for everything under `sdk-python/`.
 
 ## Setup & gates
 

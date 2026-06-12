@@ -13,7 +13,7 @@ import kicbac
 
 client = kicbac.Kicbac()  # reads KICBAC_SECURITY_KEY from the environment
 
-# `payment_token` comes from the browser (Collect.js / @kicbac/react) — raw
+# `payment_token` comes from the browser (Kicbac.js / @kicbac/react) — raw
 # card data never touches your server.
 result = client.transactions.sale(amount="19.99", payment_token="tok_from_browser")
 

@@ -30,7 +30,7 @@ else:
 
 ## Safety model
 
-- Tokenize card and bank data in Collect.js hosted fields before calling your server.
+- Tokenize card and bank data in Kicbac.js hosted fields before calling your server.
 - Send `payment_token` to this SDK. Do not send raw card numbers, CVV, routing numbers, or bank account numbers.
 - `response=2` is a typed decline result and should be handled in normal control flow.
 - `response=3`, authentication failures, processor errors, rate limits, validation errors, and transport failures raise typed exceptions.
